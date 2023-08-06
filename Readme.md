@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Найля Умирова](https://up.htmlacademy.ru/adaptive/29/user/1171555).
-* Наставник: `Наталья Зотова`(https://up.htmlacademy.ru/adaptive/29/user/1171555).
+* Наставник: [Наталья Зотова](https://htmlacademy.ru/profile/id1079951).
 
 ---
 
