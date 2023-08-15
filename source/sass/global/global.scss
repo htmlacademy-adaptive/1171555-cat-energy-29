@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $ff-lato;
+  color: #000000;
+
+  background-color: #ffffff;
+}
