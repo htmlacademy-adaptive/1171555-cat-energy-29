@@ -1,0 +1,13 @@
+.program__item {
+  background-color: $basic-grey;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.program__item--slim {
+  background-image: url("../../img/svg/cat-slim.svg");
+}
+
+.program__item--pro {
+  background-image: url("../../img/svg/cat-pro.svg");
+}
