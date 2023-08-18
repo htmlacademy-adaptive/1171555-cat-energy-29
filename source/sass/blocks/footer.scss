@@ -1,0 +1,13 @@
+.footer {
+  background-color: $basic-grey;
+}
+
+.footer__container {
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+}
+
+.footer__social {
+  display: flex;
+}

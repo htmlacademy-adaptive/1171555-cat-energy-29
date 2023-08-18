@@ -1,3 +1,7 @@
+.program__list {
+  display: flex;
+}
+
 .program__item {
   background-color: $basic-grey;
   background-repeat: no-repeat;
@@ -10,4 +14,23 @@
 
 .program__item--pro {
   background-image: url("../../img/svg/cat-pro.svg");
+}
+
+.program__title {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: $ff-oswald;
+  text-transform: uppercase;
+}
+
+.program__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.program__link {
+  font-size: 20px;
+  font-family: $ff-oswald;
+  color: #000000;
+  text-transform: uppercase;
 }

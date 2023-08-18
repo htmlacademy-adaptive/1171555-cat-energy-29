@@ -1,3 +1,29 @@
 .example {
   background-color: $basic-grey;
 }
+
+.example__container {
+  display: flex;
+}
+
+.example__title {
+  font-weight: 400;
+  font-size: 60px;
+  font-family: $ff-oswald;
+}
+
+.example__desc {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.example__parameter {
+  font-size: 30px;
+  font-family: $ff-oswald;
+}
+
+.example__total-cost {
+  font-size: 20px;
+  font-family: $ff-oswald;
+  text-transform: uppercase;
+}

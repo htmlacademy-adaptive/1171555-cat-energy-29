@@ -1,0 +1,50 @@
+.advantages__title {
+  font-weight: 400;
+  font-size: 60px;
+  font-family: $ff-oswald;
+}
+
+.advantages__list {
+  display: flex;
+}
+
+.advantages__item {
+  &::before {
+    content: "";
+
+    display: block;
+    width: 80px;
+    height: 80px;
+
+    background-color: $basic-green;
+  }
+
+  &--useful::before {
+    content: "";
+
+    background: $basic-green url(../../img/svg/icon-leaf.svg) no-repeat center;
+  }
+
+  &--release-form::before {
+    content: "";
+
+    background: $basic-green url(../../img/svg/icon-form.svg) no-repeat center;
+  }
+
+  &--food-time::before {
+    content: "";
+
+    background: $basic-green url(../../img/svg/icon-eat.svg) no-repeat center;
+  }
+
+  &--terms::before {
+    content: "";
+
+    background: $basic-green url(../../img/svg/icon-clock.svg) no-repeat center;
+  }
+}
+
+.advantages__desc {
+  font-size: 16px;
+  line-height: 24px;
+}
