@@ -1,0 +1,40 @@
+.additional__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $ff-oswald;
+}
+
+.additional__name {
+  font-size: 20px;
+  font-family: $ff-oswald;
+  color: $light-black;
+  text-transform: uppercase;
+}
+
+.additional__unit {
+  font-size: 16px;
+  color: $secondary-dark-grey;
+}
+
+.additional__cost {
+  font-size: 16px;
+  color: $secondary-dark-grey;
+}
+
+.additional__button {
+  font-size: 16px;
+  font-family: $ff-oswald;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $basic-green;
+}
+
+.additional__bonus {
+  background-color: $basic-green;
+}
+
+.additional__desc {
+  font-size: 16px;
+  color: $white;
+}

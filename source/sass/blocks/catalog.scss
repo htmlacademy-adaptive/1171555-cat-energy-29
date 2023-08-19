@@ -1,6 +1,42 @@
+.catalog__list {
+  display: grid;
+
+  grid-template-columns: repeat(4, auto);
+}
+
+.catalog__desc {
+  background-color: $basic-grey;
+}
+
 .catalog__title {
   font-size: 20px;
+  line-height: 24px;
   font-family: $ff-oswald;
-  color: #222222;
+  color: $light-black;
   text-transform: uppercase;
+}
+
+.catalog__table-item {
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondary-dark-grey;
+}
+
+.catalog__button {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $ff-oswald;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $basic-green;
+}
+
+.catalog__title--secondary {
+  color: #111111;
+}
+
+.catalog__title-sub {
+  font-size: 16px;
+  color: $secondary-dark-grey;
 }
