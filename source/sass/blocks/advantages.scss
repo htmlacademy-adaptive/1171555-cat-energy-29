@@ -1,11 +1,7 @@
 .advantages__title {
   font-weight: 400;
-  font-size: 60px;
+  font-size: 36px;
   font-family: $ff-oswald;
-}
-
-.advantages__list {
-  display: flex;
 }
 
 .advantages__item {
@@ -13,8 +9,8 @@
     content: "";
 
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 
     background-color: $basic-green;
   }

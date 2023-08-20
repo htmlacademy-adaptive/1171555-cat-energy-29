@@ -50,13 +50,13 @@ a {
 }
 
 .wrapper {
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 110px;
 
   outline: 1px solid #ff0000;
 }
 
 .list-reset {
+  padding-left: 0;
+
   list-style: none;
 }
