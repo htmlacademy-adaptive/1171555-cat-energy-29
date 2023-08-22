@@ -1,46 +1,58 @@
+.advantages__container {
+  margin-top: 20px;
+  margin-bottom: 49px;
+}
+
 .advantages__title {
+  margin-bottom: 40px;
+
   font-weight: 400;
   font-size: 36px;
   font-family: $ff-oswald;
 }
 
 .advantages__item {
+  position: relative;
+
+  margin-bottom: 26px;
+
   &::before {
     content: "";
+    position: absolute;
 
-    display: block;
     width: 60px;
     height: 60px;
 
     background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--useful::before {
     content: "";
 
-    background: $basic-green url(../../img/svg/icon-leaf.svg) no-repeat center;
+    background-image: url(../../img/svg/icon-leaf.svg);
   }
 
   &--release-form::before {
     content: "";
 
-    background: $basic-green url(../../img/svg/icon-form.svg) no-repeat center;
+    background-image: url(../../img/svg/icon-form.svg);
   }
 
   &--food-time::before {
     content: "";
 
-    background: $basic-green url(../../img/svg/icon-eat.svg) no-repeat center;
+    background-image: url(../../img/svg/icon-eat.svg);
   }
 
   &--terms::before {
     content: "";
 
-    background: $basic-green url(../../img/svg/icon-clock.svg) no-repeat center;
+    background-image: url(../../img/svg/icon-clock.svg);
   }
 }
 
 .advantages__desc {
-  font-size: 16px;
-  line-height: 24px;
+  padding-left: 77px;
 }

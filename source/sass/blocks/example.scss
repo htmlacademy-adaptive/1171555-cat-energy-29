@@ -3,12 +3,15 @@
 }
 
 .example__container {
-  display: flex;
+  padding: 25px 20px 40px;
 }
 
 .example__title {
+  margin-bottom: 40px;
+
   font-weight: 400;
   font-size: 36px;
+  line-height: 40px;
   font-family: $ff-oswald;
 }
 

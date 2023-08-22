@@ -1,6 +1,13 @@
-// .header {
-//   background-color: #ccccff;
-// }
+.header__container {
+  padding-bottom: 63px;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
 
 @media (min-width: 768px) {
   .header {
