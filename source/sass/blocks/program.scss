@@ -1,4 +1,7 @@
 .program__item {
+  margin-bottom: 20px;
+  padding: 33px 20px 18px;
+
   background-color: $basic-grey;
   background-repeat: no-repeat;
   background-position: top left;
@@ -6,13 +9,20 @@
 
 .program__item--slim {
   background-image: url("../../img/svg/cat-slim.svg");
+  background-position: left 12%;
+  background-size: 93px 50px;
 }
 
 .program__item--pro {
   background-image: url("../../img/svg/cat-pro.svg");
+  background-position: left 12%;
+  background-size: 93px 50px;
 }
 
 .program__title {
+  margin-bottom: 29px;
+  padding-left: 68px;
+
   font-weight: 400;
   font-size: 24px;
   font-family: $ff-oswald;
@@ -20,6 +30,8 @@
 }
 
 .program__text {
+  margin-bottom: 23px;
+
   color: $secondary-dark-grey;
 }
 
