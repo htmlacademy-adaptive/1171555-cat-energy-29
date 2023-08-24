@@ -1,3 +1,10 @@
+.program__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .program__item {
   margin-bottom: 20px;
   padding: 37px 20px 18px;
@@ -5,18 +12,46 @@
   background-color: $basic-grey;
   background-repeat: no-repeat;
   background-position: top left;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 61px 59px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .program__item--slim {
   background-image: url("../../img/svg/cat-slim.svg");
   background-position: left 12%;
   background-size: 89px 55px;
+
+  @media (min-width: $tablet-width) {
+    background-position: right 50%;
+    background-size: 300px 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 54px 12%;
+    background-size: 89px 100px;
+  }
 }
 
 .program__item--pro {
   background-image: url("../../img/svg/cat-pro.svg");
   background-position: left 12%;
   background-size: 89px 55px;
+
+  @media (min-width: $tablet-width) {
+    background-position: right 50%;
+    background-size: 300px 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 34px 12%;
+    background-size: 134px 100px;
+  }
 }
 
 .program__title {
@@ -27,16 +62,43 @@
   font-size: 24px;
   font-family: $ff-oswald;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+
+    font-size: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    padding-left: 149px;
+  }
 }
 
 .program__text {
   margin-bottom: 23px;
 
   color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 340px;
+    max-width: 70%;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .program__link {
   font-family: $ff-oswald;
   color: #000000;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }

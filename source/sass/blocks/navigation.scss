@@ -23,6 +23,10 @@
 
     gap: 33px;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-green;
+  }
 }
 
 .navigation__link {

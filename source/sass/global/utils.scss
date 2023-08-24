@@ -20,6 +20,10 @@
   min-height: 100%;
   margin: 0 auto;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
 }
 
 .list-reset {

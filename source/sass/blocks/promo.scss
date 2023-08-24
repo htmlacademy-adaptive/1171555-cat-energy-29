@@ -1,7 +1,7 @@
 .promo--home .promo__description {
   height: 302px;
   margin: 0 -20px;
-  padding: 27px 0 0;
+  padding: 27px 20px;
 
   color: $white;
 
@@ -15,18 +15,57 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    color: #000000;
+
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    // background-color: #ffcccc;
+  }
 }
 
 .promo__container {
+  position: relative;
+
   @media (max-width: $mobile-width-only) {
-    padding: 0;
+    padding: 0 0 30px;
+  }
+}
+
+.promo--home .promo__container {
+  @media (min-width: $desktop-width) {
+    // background-color: #be4141;
   }
 }
 
 .promo__img {
+  position: relative;
+  z-index: 0;
+
   width: 280px;
   height: 270px;
   margin: -135px auto 0;
+
+  @media (min-width: $tablet-width) {
+    z-index: -1;
+
+    width: 100%;
+    max-width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: auto;
+
+    width: 552px;
+    height: 499px;
+
+    outline: 2px solid $basic-green;
+  }
 }
 
 .promo__img img {
@@ -46,12 +85,45 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__text {
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__text--form {
   font-family: $ff-oswald;
+}
+
+.promo__button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  max-width: 280px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 50px;
+    left: 0;
+
+    padding: 14px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    transform: none;
+  }
 }
