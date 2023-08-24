@@ -11,6 +11,14 @@
   font-family: $ff-oswald;
 }
 
+.advantages__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 230px);
+  }
+}
+
 .advantages__item {
   position: relative;
 
