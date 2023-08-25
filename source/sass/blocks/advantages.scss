@@ -7,7 +7,6 @@
   margin-bottom: 40px;
 
   font-weight: 400;
-  font-size: 36px;
   font-family: $ff-oswald;
 }
 
@@ -15,7 +14,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
 
-    grid-template-columns: repeat(2, 230px);
+    gap: 37px 136px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 77px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -37,26 +42,18 @@
   }
 
   &--useful::before {
-    content: "";
-
     background-image: url(../../img/svg/icon-leaf.svg);
   }
 
   &--release-form::before {
-    content: "";
-
     background-image: url(../../img/svg/icon-form.svg);
   }
 
   &--food-time::before {
-    content: "";
-
     background-image: url(../../img/svg/icon-eat.svg);
   }
 
   &--terms::before {
-    content: "";
-
     background-image: url(../../img/svg/icon-clock.svg);
   }
 }

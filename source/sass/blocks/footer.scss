@@ -4,6 +4,11 @@
 
 .footer__container {
   padding: 40px 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__social {

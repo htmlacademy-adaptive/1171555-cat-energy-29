@@ -1,13 +1,36 @@
+.catalog__list {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .catalog__item {
   background-color: $basic-grey;
 }
 
 .catalog__title {
+  margin-bottom: 36px;
+
   font-size: 16px;
   line-height: 20px;
   font-family: $ff-oswald;
   color: $light-black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 30px;
+  }
 }
 
 .catalog__table-item {
