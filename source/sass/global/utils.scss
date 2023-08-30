@@ -20,11 +20,6 @@
   flex-direction: column;
   min-width: 320px;
   min-height: 100%;
-  margin: 0 auto;
-
-  @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-  }
 }
 
 .list-reset {

@@ -1,5 +1,13 @@
+.header {
+  position: relative;
+}
+
 .header__container {
-  padding-bottom: 63px;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
 }
 
 .header__navigation {
@@ -7,4 +15,27 @@
   justify-content: space-between;
   margin-top: 13px;
   margin-bottom: 10px;
+}
+
+.header--home:after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+    background-color: rgba(104, 183, 56, 0.85);
+    background-image: linear-gradient(
+        to top,
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../../img/cat-background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
