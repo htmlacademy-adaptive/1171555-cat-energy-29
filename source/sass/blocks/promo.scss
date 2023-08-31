@@ -1,0 +1,142 @@
+.promo--home .promo__description {
+  height: 302px;
+  margin: 0 -20px;
+  padding: 27px 20px;
+
+  color: $light;
+
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: linear-gradient(
+      to top,
+      rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)
+    ),
+    url("../../img/cat-background-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    color: #000000;
+
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 103px;
+
+    outline: 1px solid #ffcccc;
+  }
+}
+
+.promo__container {
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 0 42px;
+  }
+}
+
+.promo--home .promo__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.promo__img {
+  position: relative;
+  z-index: 0;
+
+  width: 280px;
+  height: 270px;
+  margin: -135px auto 0;
+
+  @media (min-width: $tablet-width) {
+    z-index: -1;
+
+    width: 100%;
+    max-width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: auto;
+
+    width: 552px;
+    height: 499px;
+    margin-top: 31px;
+    margin-left: -64px;
+
+    outline: 2px solid $basic-green;
+  }
+}
+
+.promo__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.promo__description {
+  font-family: $ff-oswald;
+}
+
+.promo--home .promo__description {
+  text-align: center;
+}
+
+.promo__title {
+  margin-bottom: 25px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.promo__text {
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__text--form {
+  margin-bottom: 39px;
+
+  font-family: $ff-oswald;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+}
+
+.promo__button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  max-width: 280px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 50px;
+    left: 0;
+
+    padding: 14px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    transform: none;
+  }
+}

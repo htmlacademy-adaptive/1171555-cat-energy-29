@@ -1,0 +1,86 @@
+.map--home .map__address-container {
+  position: relative;
+
+  background-color: #ffffff;
+}
+
+.map__address-container {
+  position: relative;
+
+  background-color: $basic-grey;
+}
+
+.map__address-wrapper {
+  display: grid;
+  padding: 26px 0;
+
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 40px;
+
+    gap: 312px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 99;
+
+    width: 565px;
+    padding: 61px 78px 60px 80px;
+
+    background-color: #ffffff;
+
+    gap: 30px;
+  }
+}
+
+.map__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $ff-oswald;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.map__address {
+  line-height: 20px;
+  color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.map__address span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 19px;
+  }
+}
+
+.map__iframe-wrapper {
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map__iframe-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
