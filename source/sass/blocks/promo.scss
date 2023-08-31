@@ -109,7 +109,13 @@
 }
 
 .promo__text--form {
+  margin-bottom: 39px;
+
   font-family: $ff-oswald;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .promo__button {
