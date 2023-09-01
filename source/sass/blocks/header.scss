@@ -13,8 +13,12 @@
 .header__navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 13px;
-  margin-bottom: 10px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 65px;
+  }
 }
 
 .header--home:after {

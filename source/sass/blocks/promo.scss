@@ -3,6 +3,7 @@
   margin: 0 -20px;
   padding: 27px 20px;
 
+  text-align: center;
   color: $light;
 
   background-color: rgba(104, 183, 56, 0.85);
@@ -18,16 +19,20 @@
 
   @media (min-width: $tablet-width) {
     text-align: left;
-    color: #000000;
+    color: $dark;
 
     background: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 103px;
+    padding-top: 37px;
 
     outline: 1px solid #ffcccc;
   }
+}
+
+.promo__description {
+  font-family: $ff-oswald;
 }
 
 .promo__container {
@@ -76,14 +81,6 @@
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.promo__description {
-  font-family: $ff-oswald;
-}
-
-.promo--home .promo__description {
-  text-align: center;
 }
 
 .promo__title {

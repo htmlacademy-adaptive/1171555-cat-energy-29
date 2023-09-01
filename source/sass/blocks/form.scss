@@ -84,7 +84,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  color: #000000;
+  color: $dark;
   text-transform: none;
 
   @media (min-width: $tablet-width) {
@@ -109,7 +109,7 @@
   width: 20px;
   height: 20px;
 
-  background-color: #000000;
+  background-color: $dark;
   transform: translateY(-52%);
 
   mask-repeat: no-repeat;
