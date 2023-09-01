@@ -66,8 +66,17 @@
 .form__item-outer {
   display: grid;
 
-  gap: 80px;
-  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .form__item {
