@@ -62,11 +62,28 @@
 .example__parameter-list {
   display: grid;
 
+  gap: 32px;
   grid-template-columns: repeat(2, 124px);
 
   @media (min-width: $tablet-width) {
     gap: 33px;
     grid-template-columns: repeat(2, 162px);
+  }
+}
+
+.example__parameter-wrapper {
+  position: relative;
+
+  width: 124px;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 25px;
+
+  border: 1px solid $line-grey;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
   }
 }
 
@@ -81,13 +98,32 @@
 }
 
 .example__parameter-desc {
-  margin: 0;
+  position: absolute;
+  right: 50%;
+  bottom: -12px;
+
+  padding: 0 7px;
 
   font-size: 12px;
+  line-height: 12px;
   color: $secondary-dark-grey;
+  text-transform: lowercase;
+
+  background-color: #eaeaea;
+  transform: translateX(50%);
 
   @media (min-width: $tablet-width) {
+    bottom: -5px;
+
+    width: max-content;
+
     font-size: 14px;
+
+    background-color: $light;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey;
   }
 }
 
@@ -110,8 +146,6 @@
     width: 327px;
 
     text-align: left;
-
-    outline: 1px solid red;
   }
 }
 

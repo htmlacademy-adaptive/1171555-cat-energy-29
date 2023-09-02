@@ -63,7 +63,7 @@
               </fieldset>
               <fieldset class="form__fieldset form__fieldset--radio">
                 <h3 class="visually-hidden">Выбор программы для питомца</h3>
-                <div class="form__control-item">
+                <div class="form__radio-item">
                   <input class="form__control form__control--radio" name="weight" type="radio" value="Похудение" id="slim" checked>
                   <label class="form__control-label" for="slim">Похудение</label>
                 </div>
@@ -100,23 +100,24 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--control">
               <h3 class="form__title title-lines"><span>Дополнительно</span></h3>
-              <div class="form__control-item">
-                <input class="form__control form__control--check" name="sweetener" type="checkbox" id="sweetener" checked>
-                <label class="form__control-label" for="sweetener">Cахарозаменитель</label>
+              <div class="form__control-outer">
+                <div class="form__control-item">
+                  <input class="form__control form__control--check" name="sweetener" type="checkbox" id="sweetener" checked>
+                  <label class="form__control-label" for="sweetener">Cахарозаменитель</label>
+                </div>
+                <div class="form__control-item">
+                  <input class="form__control form__control--check" name="water" type="checkbox" id="water">
+                  <label class="form__control-label" for="water">Питьевая вода</label>
+                </div>
+                <div class="form__control-item">
+                  <input class="form__control form__control--check" name="milk" type="checkbox" id="milk">
+                  <label class="form__control-label" for="milk">Молоко</label>
+                </div>
+                <div class="form__control-item">
+                  <input class="form__control form__control--check" name="vitamins" type="checkbox" id="vitamins">
+                  <label class="form__control-label" for="vitamins">Витамины</label>
+                </div>
               </div>
-              <div class="form__control-item">
-                <input class="form__control form__control--check" name="water" type="checkbox" id="water">
-                <label class="form__control-label" for="water">Питьевая вода</label>
-              </div>
-              <div class="form__control-item">
-                <input class="form__control form__control--check" name="milk" type="checkbox" id="milk">
-                <label class="form__control-label" for="milk">Молоко</label>
-              </div>
-              <div class="form__control-item">
-                <input class="form__control form__control--check" name="vitamins" type="checkbox" id="vitamins">
-                <label class="form__control-label" for="vitamins">Витамины</label>
-              </div>
-
             </fieldset>
             <div class="form__fieldset form__fieldset--button">
               <button class="form__button button" type="submit">Отправить заявку</button>
