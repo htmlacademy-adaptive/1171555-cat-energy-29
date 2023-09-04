@@ -54,3 +54,63 @@
 .slider__view--after img {
   object-position: right;
 }
+
+.slider__change {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 99;
+
+  width: 4px;
+
+  color: #666666;
+
+  background-color: #666666;
+  border-radius: 2px;
+  transform: translateX(-50%);
+
+  &:hover,
+  &:focus-within {
+    color: $basic-green;
+
+    background-color: $basic-green;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+}
+
+.slider__change-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  color: currentColor;
+
+  background: $light;
+  border: 2px solid currentColor;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  fill: currentColor;
+
+  // &:hover,
+  // &:focus,
+  // &:focus-visible {
+  //   border-color: currentColor;
+
+  //   fill: currentColor;
+  // }
+
+  // &:active {
+  //   border-color: currentColor;
+  //   opacity: 0.6;
+  // }
+}

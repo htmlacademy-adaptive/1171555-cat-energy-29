@@ -244,6 +244,14 @@
   padding: 14px 35px 13px 15px;
 
   border: 1px solid $special-line-grey;
+
+  &:hover {
+    border: 1px solid $line-grey;
+  }
+
+  &:focus {
+    border: 2px solid $secondary-dark-grey;
+  }
 }
 
 .form__input::placeholder {

@@ -47,11 +47,25 @@
 }
 
 .navigation__link {
+  padding-bottom: 8px;
+
   font-weight: 400;
   font-size: 20px;
   font-family: $ff-oswald;
   color: $dark;
   text-transform: uppercase;
+}
+
+.navigation__link--current {
+  border-bottom: 2px solid $basic-green;
+}
+
+.navigation__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.navigation__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .header--home .navigation__link {

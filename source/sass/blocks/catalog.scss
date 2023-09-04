@@ -209,4 +209,28 @@
   @media (min-width: $desktop-width) {
     margin-top: 67px;
   }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:focus {
+    color: rgba(68, 68, 68, 0.7);
+
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $secondary-dark-grey;
+
+    background-color: $line-grey;
+    opacity: 0.3;
+
+    pointer-events: none;
+  }
 }
