@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 3px;
 
   @media (max-width: $mobile-width-only) {
     &::after {

@@ -20,14 +20,32 @@
   }
 }
 
+// Цвет лого не красится???
 .footer__logo {
   display: block;
   margin-bottom: 19px;
 
   text-align: center;
+  color: #111111;
+
+  fill: currentColor;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #3e3e3e;
+
+    outline: none;
+  }
+
+  &:active {
+    color: #6b6b6b;
+
+    opacity: 0.3;
   }
 }
 
@@ -50,6 +68,22 @@
   }
 }
 
+.social__link {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $basic-green;
+  }
+}
+
 .footer__copyright {
   display: flex;
   justify-content: space-between;
@@ -62,5 +96,19 @@
 
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $basic-green;
   }
 }
