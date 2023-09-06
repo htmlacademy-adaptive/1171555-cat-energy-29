@@ -86,11 +86,15 @@
 }
 
 .advantages__item span {
+  display: none;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 90px;
     left: 116px;
     z-index: -1;
+
+    display: block;
 
     font-size: 280px;
     font-family: $ff-oswald;
