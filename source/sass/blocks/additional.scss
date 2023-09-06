@@ -1,17 +1,42 @@
 .additional__container {
   padding-top: 25px;
   padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
 }
 
 .additional__title {
   padding-bottom: 36px;
 
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
   font-family: $ff-oswald;
 
-  border-bottom: 1px solid $line-grey;
+  @media (min-width: $tablet-width) {
+    margin: 0 -30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 -110px;
+    padding-left: 70px;
+  }
+}
+
+.additional__title span {
+  max-width: 100%;
+  margin-top: 26px;
+}
+
+.additional__wrapper-outer {
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 0 81px;
+    grid-template-columns: 1fr 245px;
+  }
 }
 
 .additional__wrapper {
@@ -22,6 +47,32 @@
   padding-bottom: 19px;
 
   border-bottom: 1px solid $line-grey;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    padding: 26px 40px 28px;
+
+    border-right: 1px solid $line-grey;
+    border-left: 1px solid $line-grey;
+
+    gap: 0 23px;
+    grid-template-columns: 1fr 150px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: baseline;
+    padding: 15px 0 17px;
+
+    border-right: none;
+    border-left: none;
+
+    gap: 0 23px;
+    grid-template-columns: 1fr 150px 70px 244px;
+  }
+}
+
+.additional__wrapper--line {
+  border-top: 1px solid $line-grey;
 }
 
 .additional__name {
@@ -34,6 +85,10 @@
   font-family: $ff-oswald;
   color: $light-black;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additional__unit {
@@ -41,11 +96,23 @@
   margin-bottom: 15px;
 
   color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additional__cost {
   font-size: 16px;
   color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
 }
 
 .additional__button {
@@ -56,6 +123,14 @@
   text-transform: uppercase;
 
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+  }
 }
 
 .additional__bonus {
@@ -75,6 +150,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+    margin-top: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 290px;
+    margin-top: 0;
+  }
 }
 
 .additional__bonus::after {
@@ -88,6 +173,24 @@
   background-image: url("../../img/svg/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    top: 50%;
+    left: 77px;
+
+    width: 78px;
+
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 56px;
+    left: 0;
+
+    width: 100%;
+
+    transform: none;
+  }
 }
 
 .additional__desc {
@@ -97,4 +200,20 @@
   line-height: 20px;
   text-align: center;
   color: $light;
+
+  @media (min-width: $tablet-width) {
+    width: 286px;
+    margin-left: auto;
+    padding-top: 72px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 185px;
+
+    text-align: center;
+  }
 }
