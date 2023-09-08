@@ -1,7 +1,7 @@
 .map--home .map__address-container {
   position: relative;
 
-  background-color: #ffffff;
+  background-color: $light;
 }
 
 .map__address-container {
@@ -31,7 +31,7 @@
     width: 565px;
     padding: 61px 78px 60px 80px;
 
-    background-color: #ffffff;
+    background-color: $light;
 
     gap: 30px;
   }

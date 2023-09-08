@@ -69,19 +69,19 @@
   }
 
   &--useful::before {
-    background-image: url(../../img/svg/icon-leaf.svg);
+    background-image: url("../img/svg/icon-leaf.svg");
   }
 
   &--release-form::before {
-    background-image: url(../../img/svg/icon-form.svg);
+    background-image: url("../img/svg/icon-form.svg");
   }
 
   &--food-time::before {
-    background-image: url(../../img/svg/icon-eat.svg);
+    background-image: url("../img/svg/icon-eat.svg");
   }
 
   &--terms::before {
-    background-image: url(../../img/svg/icon-clock.svg);
+    background-image: url("../img/svg/icon-clock.svg");
   }
 }
 

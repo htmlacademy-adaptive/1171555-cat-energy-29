@@ -3,10 +3,7 @@
 
   width: 100%;
   max-width: 280px;
-  // height: 256px;
   margin: 0 auto;
-
-  // overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 560px;
@@ -100,17 +97,4 @@
   cursor: pointer;
 
   fill: currentColor;
-
-  // &:hover,
-  // &:focus,
-  // &:focus-visible {
-  //   border-color: currentColor;
-
-  //   fill: currentColor;
-  // }
-
-  // &:active {
-  //   border-color: currentColor;
-  //   opacity: 0.6;
-  // }
 }
