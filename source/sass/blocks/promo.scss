@@ -1,6 +1,16 @@
+.promo {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid #d9d9d9;
+  }
+}
+
+.promo--home {
+  border-top: none;
+}
+
 .promo--home .promo__description {
   height: 302px;
-  margin: 0 -20px;
+  // margin: 0 -20px;
   padding: 27px 20px;
 
   text-align: center;
@@ -62,7 +72,15 @@
 .promo__container {
   position: relative;
 
-  @media (max-width: $mobile-width-only) {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding: 0;
   }
 }
@@ -73,6 +91,21 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0;
+    padding-bottom: 37px;
+  }
+}
+
+.promo--form .promo__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 

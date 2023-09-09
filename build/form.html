@@ -16,7 +16,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container container">
-        <nav class="header__navigation navigation is-closed">
+        <nav class="header__navigation navigation">
           <a href="index.html" class="header__logo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
@@ -35,16 +35,16 @@
             <li class="navigation__item"><a href="form.html" class="navigation__link navigation__link--current" aria-current="page">Подбор программы</a></li>
           </ul>
         </nav>
-
-        <section class="promo promo--form">
-          <div class="promo__container container">
-            <div class="promo__description">
-              <h1 class="promo__title title-page">Подбор программы</h1>
-              <p class="promo__text promo__text--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-            </div>
-          </div>
-        </section>
       </div>
+      <section class="promo promo--form">
+        <div class="promo__container">
+          <div class="promo__description">
+            <h1 class="promo__title title-page">Подбор программы</h1>
+            <p class="promo__text promo__text--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          </div>
+        </div>
+      </section>
+
     </header>
     <main class="main">
       <section class="form">
@@ -151,7 +151,7 @@
                 <source media="(min-width: 768px)" srcset="img/map/location-tablet.jpg 1x, img/map/location-tablet.jpg 2x">
 
                 <source type="image/webp" srcset="img/map/location-mobile.webp 1x, img/map/location-mobile@2x.webp 2x">
-                <img src="img/map/location-mobile.jpg" srcset="img/map/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта с точкой локации" class="map__img">
+                <img src="img/map/location-mobile.jpg" srcset="img/map/location-mobile@2x.jpg 2x" width="320" height="362" alt="Карта с точкой локации">
               </picture>
             </a>
           </noscript>
@@ -169,7 +169,7 @@
         <ul class="footer__social social list-reset">
           <li class="social__item">
             <a class="social__link" href="#">
-              <svg width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+              <svg width="28" height="22">
                 <use xlink:href="img/sprite.svg#social-vk"></use>
               </svg>
               <span class="visually-hidden">Vkontakte</span>
