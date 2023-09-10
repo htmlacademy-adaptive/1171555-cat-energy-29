@@ -6,8 +6,8 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 560px;
-    height: 512px;
+    max-width: 560px;
+    // height: 512px;
   }
 }
 
@@ -16,6 +16,11 @@
 
   min-height: 256px;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    min-height: 512px;
+    // height: 512px;
+  }
 }
 
 .slider__view {
@@ -99,4 +104,8 @@
   cursor: pointer;
 
   fill: currentColor;
+}
+
+.slider__change-pin svg {
+  margin-top: 2px;
 }
