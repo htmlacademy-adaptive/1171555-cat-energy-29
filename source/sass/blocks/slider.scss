@@ -3,14 +3,10 @@
 
   width: 100%;
   max-width: 280px;
-  // height: 256px;
   margin: 0 auto;
 
-  // overflow: hidden;
-
   @media (min-width: $tablet-width) {
-    width: 560px;
-    height: 512px;
+    max-width: 560px;
   }
 }
 
@@ -19,6 +15,10 @@
 
   min-height: 256px;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    min-height: 512px;
+  }
 }
 
 .slider__view {
@@ -45,9 +45,11 @@
   display: block;
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
 }
 
-.slider__view--before {
+.slider__view--before img {
   object-position: left;
 }
 
@@ -100,17 +102,8 @@
   cursor: pointer;
 
   fill: currentColor;
+}
 
-  // &:hover,
-  // &:focus,
-  // &:focus-visible {
-  //   border-color: currentColor;
-
-  //   fill: currentColor;
-  // }
-
-  // &:active {
-  //   border-color: currentColor;
-  //   opacity: 0.6;
-  // }
+.slider__change-pin svg {
+  margin-top: 2px;
 }

@@ -32,33 +32,33 @@
 }
 
 .program__item--slim {
-  background-image: url("../../img/svg/cat-slim.svg");
-  background-position: left 12%;
-  background-size: 89px 55px;
+  background-image: url("../img/svg/cat-slim.svg");
+  background-position: 20px 21px;
+  background-size: 50px 53px;
 
   @media (min-width: $tablet-width) {
-    background-position: right 52%;
-    background-size: 326px 211px;
+    background-position: top 80px right 62px;
+    background-size: 200px 211px;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 54px 12%;
-    background-size: 89px 100px;
+    background-position: 52px 41px;
+    background-size: 100px 106px;
   }
 }
 
 .program__item--pro {
-  background-image: url("../../img/svg/cat-pro.svg");
-  background-position: left 12%;
-  background-size: 89px 55px;
+  background-image: url("../img/svg/cat-pro.svg");
+  background-position: 13px 24px;
+  background-size: 67px 50px;
 
   @media (min-width: $tablet-width) {
-    background-position: right 50%;
-    background-size: 300px 200px;
+    background-position: top 92px right 30px;
+    background-size: 268px 200px;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: 34px 12%;
+    background-position: 34px 47px;
     background-size: 134px 100px;
   }
 }
@@ -104,11 +104,45 @@
 }
 
 .program__link {
+  position: relative;
+
+  padding-right: 57px;
+
   font-family: $ff-oswald;
   color: $dark;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+
+    width: 32px;
+    height: 12px;
+
+    background-image: url("../img/svg/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 12px;
+    transform: translateY(-50%);
+  }
+
+  &:focus::after,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:focus-visible::after {
+    background-image: url("../img/svg/icon-arrow-hover.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 32px 12px;
   }
 }

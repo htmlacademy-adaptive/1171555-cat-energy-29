@@ -1,7 +1,15 @@
 .navigation {
   position: relative;
 
+  width: 100%;
   min-height: 65px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .navigation__list {
@@ -41,6 +49,9 @@
   border-top: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
+    padding-top: 2px;
+    padding-bottom: 0;
+
     background-color: transparent;
     border: none;
   }
@@ -54,18 +65,31 @@
   font-family: $ff-oswald;
   color: $dark;
   text-transform: uppercase;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
 }
 
 .navigation__link--current {
   border-bottom: 2px solid $basic-green;
 }
 
-.navigation__link:hover {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.navigation__link:active {
-  color: rgba(0, 0, 0, 0.3);
+.header--home .navigation__link--current {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $light;
+  }
 }
 
 .header--home .navigation__link {
@@ -81,54 +105,62 @@
 .navigation__toggle {
   position: absolute;
   top: 22px;
-  right: 0;
+  right: 20px;
 
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 18px;
 
   background-color: transparent;
   border: none;
+  border-top: 2px solid $dark;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
 
-.is-closed .navigation__toggle {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 2px;
-
-    border-top: 2px solid $dark;
-    box-shadow: 0 8px 0 $dark, 0 16px 0 $dark;
-  }
-}
-
-.is-open .navigation__toggle {
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 12;
-    left: 0;
+    left: 50%;
 
     width: 24px;
     height: 2px;
 
     border-top: 2px solid $dark;
+    transform: translateX(-50%);
   }
 
   &::before {
-    transform: rotate(45deg);
+    top: 6px;
   }
 
   &::after {
-    transform: rotate(-45deg);
+    bottom: 0;
   }
+}
+
+.navigation.is-open .navigation__toggle {
+  border-color: transparent;
+
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &::after {
+    bottom: 8px;
+
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+.navigation--no-js {
+  flex-direction: column;
+}
+
+.navigation--no-js .navigation__list {
+  position: relative;
+
+  display: block;
 }
