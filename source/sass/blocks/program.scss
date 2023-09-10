@@ -132,8 +132,14 @@
     transform: translateY(-50%);
   }
 
+  &:focus::after,
+  &:focus-visible {
+    outline: none;
+  }
+
   &:hover::after,
-  &:focus::after {
+  &:focus::after,
+  &:focus-visible::after {
     background-image: url("../img/svg/icon-arrow-hover.svg");
     background-repeat: no-repeat;
     background-position: left center;

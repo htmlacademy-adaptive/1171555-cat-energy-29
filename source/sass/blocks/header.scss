@@ -79,7 +79,10 @@
     opacity: 0.8;
   }
 
+  &:focus,
+  &:focus-visible,
   &:active {
+    outline: none;
     opacity: 0.6;
   }
 }

@@ -64,6 +64,12 @@
     border-color: $control;
   }
 
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    opacity: 0.3;
+  }
+
   &:disabled,
   &:disabled + .form__control-text {
     opacity: 0.3;

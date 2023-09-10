@@ -65,6 +65,21 @@
   font-family: $ff-oswald;
   color: $dark;
   text-transform: uppercase;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
 }
 
 .navigation__link--current {
@@ -75,14 +90,6 @@
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid $light;
   }
-}
-
-.navigation__link:hover {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.navigation__link:active {
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .header--home .navigation__link {
