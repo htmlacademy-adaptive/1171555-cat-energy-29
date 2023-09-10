@@ -1,5 +1,5 @@
 .advantages__container {
-  padding-bottom: 49px;
+  padding-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     padding-top: 15px;
@@ -41,7 +41,7 @@
 .advantages__item {
   position: relative;
 
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     padding-right: 60px;
@@ -103,7 +103,8 @@
 }
 
 .advantages__desc {
-  padding-left: 77px;
+  padding-top: 2px;
+  padding-left: 80px;
 
   @media (min-width: $tablet-width) {
     padding-top: 111px;

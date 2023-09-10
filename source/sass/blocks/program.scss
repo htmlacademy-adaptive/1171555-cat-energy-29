@@ -15,7 +15,7 @@
 
 .program__item {
   margin-bottom: 20px;
-  padding: 37px 20px 18px;
+  padding: 39px 20px 18px;
 
   background-color: $basic-grey;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .program__item--slim {
   background-image: url("../img/svg/cat-slim.svg");
-  background-position: 20px 21px;
+  background-position: 20px 22px;
   background-size: 50px 53px;
 
   @media (min-width: $tablet-width) {
@@ -64,8 +64,8 @@
 }
 
 .program__title {
-  margin-bottom: 33px;
-  padding-left: 68px;
+  margin-bottom: 40px;
+  padding-left: 70px;
 
   font-weight: 400;
   font-size: 24px;
@@ -85,9 +85,12 @@
 }
 
 .program__text {
-  margin-bottom: 23px;
+  margin-bottom: 19px;
+  padding-bottom: 21px;
 
   color: $secondary-dark-grey;
+
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
     min-width: 340px;
@@ -96,6 +99,8 @@
 
     font-size: 16px;
     line-height: 24px;
+
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -108,6 +113,7 @@
 
   padding-right: 57px;
 
+  font-size: 16px;
   font-family: $ff-oswald;
   color: $dark;
   text-transform: uppercase;
@@ -120,7 +126,7 @@
     content: "";
     position: absolute;
     top: 45%;
-    right: 0;
+    right: 8px;
 
     width: 32px;
     height: 12px;

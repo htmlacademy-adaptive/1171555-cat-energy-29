@@ -33,7 +33,7 @@
     flex-direction: row;
     justify-content: flex-end;
 
-    gap: 33px;
+    gap: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,7 +49,7 @@
   border-top: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 2px;
+    padding-top: 8px;
     padding-bottom: 0;
 
     background-color: transparent;
@@ -105,7 +105,7 @@
 .navigation__toggle {
   position: absolute;
   top: 22px;
-  right: 20px;
+  right: 21px;
 
   width: 24px;
   height: 18px;

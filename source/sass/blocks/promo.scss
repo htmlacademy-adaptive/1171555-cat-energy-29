@@ -28,6 +28,9 @@
   background-size: cover;
 
   @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    padding-left: 91px;
+
     text-align: left;
     color: $dark;
 
@@ -115,7 +118,7 @@
 
   width: 280px;
   height: 270px;
-  margin: -135px auto 0;
+  margin: -135px auto 6px;
 
   @media (min-width: $tablet-width) {
     z-index: -1;
@@ -160,6 +163,8 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin-top: 41px;
+
     font-size: 20px;
     line-height: 20px;
   }
