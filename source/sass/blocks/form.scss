@@ -58,6 +58,20 @@
   }
 }
 
+.form__control {
+  &:hover,
+  &:active {
+    border-color: $control;
+  }
+
+  &:disabled,
+  &:disabled + .form__control-text {
+    opacity: 0.3;
+
+    pointer-events: none;
+  }
+}
+
 .form__control--radio {
   position: relative;
 
@@ -97,24 +111,21 @@
 }
 
 .form__radio-item {
-  display: grid;
-  align-items: center;
-
-  gap: 15px;
-  grid-template-columns: auto 1fr;
-
   @media (min-width: $tablet-width) {
     gap: 20px;
   }
 }
 
-.form__control-item {
+.form__control-label {
   display: grid;
   align-items: center;
-  margin-bottom: 13px;
 
   gap: 15px;
   grid-template-columns: auto 1fr;
+}
+
+.form__control-item {
+  margin-bottom: 13px;
 }
 
 .form__control--check {
@@ -213,23 +224,47 @@
 
 .form__input-outer {
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 52%;
+    right: 12px;
+    z-index: 99;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: $dark;
+    transform: translateY(-52%);
+
+    mask-repeat: no-repeat;
+  }
+
+  &:focus-within::after {
+    background-color: $basic-green;
+  }
+
+  &:hover::after {
+    background-color: $light-black;
+  }
 }
 
-.form__input-outer::after {
-  content: "";
-  position: absolute;
-  top: 52%;
-  right: 12px;
-  z-index: 99;
+// .form__input--invalid {
+//   background-color: $error;
+// }
 
-  width: 20px;
-  height: 20px;
+// .form__input--invalid {
+//   &:focus-within::after {
+//     background-color: $error;
+//   }
+// }
 
-  background-color: $dark;
-  transform: translateY(-52%);
-
-  mask-repeat: no-repeat;
-}
+// .form__input--valid {
+//   &:focus-within::after {
+//     background-color: $light-black;
+//   }
+// }
 
 .form__input--email::after {
   mask-image: url("../img/svg/icon-email.svg");
@@ -246,13 +281,34 @@
   border: 1px solid $special-line-grey;
 
   &:hover {
-    border: 1px solid $line-grey;
+    border-color: $line-grey;
   }
 
-  &:focus {
-    border: 2px solid $secondary-dark-grey;
+  &:focus,
+  &:focus-visible {
+    border-color: 1px solid $secondary-dark-grey;
+    outline: none;
+    box-shadow: 0 0 0 1px $secondary-dark-grey;
   }
+
+  &:invalid {
+    border-color: $error;
+    box-shadow: 0 0 0 1px $error;
+  }
+
+  // &:valid {
+  //   border-color: $basic-green;
+  //   box-shadow: 0 0 0 1px $basic-green;
+  // }
 }
+
+// .form__input--invalid input {
+//   border-color: $error;
+// }
+
+// .form__input--valid input {
+//   border-color: $line-grey;
+// }
 
 .form__input::placeholder {
   font-size: 16px;
@@ -282,6 +338,14 @@
   padding: 14px 15px 13px;
 
   border: 1px solid $special-line-grey;
+
+  resize: none;
+
+  &:focus,
+  &:focus-visible {
+    border-color: $secondary-dark-grey;
+    box-shadow: 0 0 0 1px $secondary-dark-grey;
+  }
 }
 
 .form__button {

@@ -74,4 +74,12 @@
     width: 202px;
     height: 59px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

@@ -16,7 +16,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container container">
-        <nav class="header__navigation navigation">
+        <nav class="header__navigation navigation navigation--no-js">
           <a href="index.html" class="header__logo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
@@ -70,16 +70,22 @@
               <fieldset class="form__fieldset form__fieldset--radio">
                 <h3 class="visually-hidden">Выбор программы для питомца</h3>
                 <div class="form__radio-item">
-                  <input class="form__control form__control--radio" name="weight" type="radio" value="Похудение" id="slim" checked>
-                  <label class="form__control-label" for="slim">Похудение</label>
+                  <label class="form__control-label" for="slim">
+                    <input class="form__control form__control--radio" name="weight" type="radio" value="Похудение" id="slim" checked>
+                    <span class="form__control-text">Похудение</span>
+                  </label>
                 </div>
                 <div class="form__radio-item">
-                  <input class="form__control form__control--radio" name="weight" type="radio" value="Набор массы" id="weight-gain">
-                  <label class="form__control-label" for="weight-gain">Набор массы</label>
+                  <label class="form__control-label" for="weight-gain">
+                    <input class="form__control form__control--radio" name="weight" type="radio" value="Набор массы" id="weight-gain">
+                    <span class="form__control-text">Набор массы</span>
+                  </label>
                 </div>
                 <div class="form__radio-item">
-                  <input class="form__control form__control--radio" name="weight" type="radio" value="Не знаю (Нужен ваш совет)" id="unknown">
-                  <label class="form__control-label" for="unknown">Не знаю (Нужен ваш совет)</label>
+                  <label class="form__control-label" for="unknown">
+                    <input class="form__control form__control--radio" name="weight" type="radio" value="Не знаю (Нужен ваш совет)" id="unknown">
+                    <span class="form__control-text">Не знаю (Нужен ваш совет)</span>
+                  </label>
                 </div>
               </fieldset>
             </div>
@@ -88,13 +94,15 @@
               <div class="form__item-outer">
                 <div class="form__item">
                   <label class="form__label" for="email">E-mail:<sup>*</sup></label>
-                  <span class="form__input-outer form__input--email form__input--invalid">
+                  <!--form__input--invalid показывает ошибку при валидации-->
+                  <!--form__input--valid показывает, что валидация прошла без ошибок-->
+                  <span class="form__input-outer form__input--email">
                     <input class="form__input" name="email" type="text" id="email" placeholder="kuklachev@gmail.com">
                   </span>
                 </div>
                 <div class="form__item">
                   <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
-                  <span class="form__input-outer form__input--phone form__input--invalid">
+                  <span class="form__input-outer form__input--phone">
                     <input class="form__input" name="phone" type="text" id="phone" placeholder="8 (960) 900-60-90">
                   </span>
                 </div>
@@ -108,20 +116,28 @@
               <h3 class="form__title title-lines"><span>Дополнительно</span></h3>
               <div class="form__control-outer">
                 <div class="form__control-item">
-                  <input class="form__control form__control--check" name="sweetener" type="checkbox" id="sweetener" checked>
-                  <label class="form__control-label" for="sweetener">Cахарозаменитель</label>
+                  <label class="form__control-label" for="sweetener">
+                    <input class="form__control form__control--check" name="sweetener" type="checkbox" id="sweetener" checked>
+                    <span class="form__control-text">Cахарозаменитель</span>
+                  </label>
                 </div>
                 <div class="form__control-item">
-                  <input class="form__control form__control--check" name="water" type="checkbox" id="water">
-                  <label class="form__control-label" for="water">Питьевая вода</label>
+                  <label class="form__control-label" for="water">
+                    <input class="form__control form__control--check" name="water" type="checkbox" id="water">
+                    <span class="form__control-text">Питьевая вода</span>
+                  </label>
                 </div>
                 <div class="form__control-item">
-                  <input class="form__control form__control--check" name="milk" type="checkbox" id="milk">
-                  <label class="form__control-label" for="milk">Молоко</label>
+                  <label class="form__control-label" for="milk">
+                    <input class="form__control form__control--check" name="milk" type="checkbox" id="milk">
+                    <span class="form__control-text">Молоко</span>
+                  </label>
                 </div>
                 <div class="form__control-item">
-                  <input class="form__control form__control--check" name="vitamins" type="checkbox" id="vitamins">
-                  <label class="form__control-label" for="vitamins">Витамины</label>
+                  <label class="form__control-label" for="vitamins">
+                    <input class="form__control form__control--check" name="vitamins" type="checkbox" id="vitamins">
+                    <span class="form__control-text">Витамины</span>
+                  </label>
                 </div>
               </div>
             </fieldset>
@@ -166,7 +182,7 @@
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
         </a>
-        <ul class="footer__social social list-reset">
+        <ul class="footer__social list-reset">
           <li class="social__item">
             <a class="social__link" href="#">
               <svg width="28" height="22">
