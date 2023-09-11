@@ -27,7 +27,7 @@
 .catalog__item {
   position: relative;
 
-  padding: 70px 0 0;
+  padding: 14px 0 0;
 }
 
 .catalog__item::after {
@@ -56,12 +56,12 @@
 
 .catalog__item-content {
   display: grid;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 
   grid-template-columns: 140px 1fr;
 
   @media (min-width: $tablet-width) {
-    padding: 0 37px 25px;
+    padding: 0 37px 26px;
 
     background-color: $basic-grey;
 
@@ -84,7 +84,8 @@
 
 .catalog__title {
   width: 93px;
-  margin-bottom: 20px;
+  margin-top: 7px;
+  margin-bottom: 15px;
 
   font-weight: 400;
   font-size: 16px;
@@ -180,6 +181,7 @@
 .catalog__item--more::before {
   content: "";
   position: absolute;
+  top: 22px;
   left: 0;
 
   width: 100%;
