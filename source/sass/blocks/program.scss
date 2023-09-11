@@ -67,6 +67,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 62px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .program__title {
@@ -86,8 +90,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 73px;
-    padding-left: 149px;
+    margin-bottom: 82px;
+    padding-left: 162px;
   }
 }
 
@@ -112,6 +116,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 100%;
+    margin-bottom: 13px;
   }
 }
 

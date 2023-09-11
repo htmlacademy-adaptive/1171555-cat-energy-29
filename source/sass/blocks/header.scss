@@ -1,5 +1,7 @@
 .header {
   position: relative;
+
+  padding-bottom: 52px;
 }
 
 .header__container {
@@ -8,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 55px;
+    padding-top: 29px;
   }
 }
 
@@ -73,6 +75,8 @@
   @media (min-width: $desktop-width) {
     width: 202px;
     height: 59px;
+    margin-top: 4px;
+    margin-left: 6px;
   }
 
   &:hover {
