@@ -3,7 +3,7 @@
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 70px;
+    padding-top: 45px;
     padding-bottom: 75px;
   }
 }
@@ -15,8 +15,14 @@
   font-family: $ff-oswald;
 
   @media (min-width: $tablet-width) {
-    margin: 0 -30px;
+    margin: 0 -30px 51px;
     padding-left: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      top: 32%;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -49,7 +55,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    padding: 26px 40px 28px;
+    padding: 26px 38px 30px;
 
     border-right: 1px solid $line-grey;
     border-left: 1px solid $line-grey;
@@ -85,6 +91,11 @@
   color: $light-black;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
@@ -97,6 +108,10 @@
   color: $secondary-dark-grey;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
   }
 
@@ -110,6 +125,8 @@
   color: $secondary-dark-grey;
 
   @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
   }
 }
@@ -138,6 +155,7 @@
   width: 100%;
   height: 290px;
   margin-top: 34px;
+
   background-color: rgba(104, 183, 56, 0.85);
   background-image: linear-gradient(
       to top,
@@ -151,7 +169,7 @@
 
   @media (min-width: $tablet-width) {
     height: 200px;
-    margin-top: 70px;
+    margin-top: 67px;
   }
 
   @media (min-width: $desktop-width) {
