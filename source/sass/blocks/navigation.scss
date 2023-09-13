@@ -44,13 +44,14 @@
 }
 
 .navigation__item {
-  padding-top: 22px;
+  padding-top: 21px;
   padding-bottom: 24px;
 
   background-color: $light;
   border-top: 1px solid $basic-grey;
 
   @media (min-width: $tablet-width) {
+    padding-top: 22px;
     padding-top: 9px;
     padding-bottom: 0;
 
