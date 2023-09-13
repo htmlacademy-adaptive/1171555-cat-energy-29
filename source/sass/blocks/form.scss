@@ -43,6 +43,10 @@
 
     gap: 27px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 81px;
+  }
 }
 
 .form__fieldset--radio {
@@ -53,8 +57,8 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 70px;
-    padding: 23px 27px 27px;
+    margin: 0 0 73px;
+    padding: 21px 27px 24px;
 
     border: 1px solid #d9d9d9;
 
@@ -64,7 +68,11 @@
 
 .form__fieldset--contacts {
   @media (min-width: $tablet-width) {
-    margin-bottom: 75px;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
   }
 }
 
@@ -82,7 +90,11 @@
 
 .form__fieldset--comments {
   @media (min-width: $tablet-width) {
-    margin-bottom: 104px;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
   }
 }
 
@@ -156,6 +168,10 @@
 
   gap: 15px;
   grid-template-columns: auto 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
 }
 
 .form__control-item {
@@ -191,8 +207,14 @@
 }
 
 .form__fieldset--control {
+  margin-bottom: 18px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: -15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -9px;
   }
 }
 
@@ -213,6 +235,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    gap: 14px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -227,6 +250,12 @@
     gap: 60px;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+
+    gap: 80px;
+  }
 }
 
 .form__item-outer {
@@ -236,7 +265,7 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    gap: 27px;
+    gap: 29px;
   }
 
   @media (min-width: $desktop-width) {
@@ -288,6 +317,14 @@
     transform: translateY(-52%);
 
     mask-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      right: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 15px;
+    }
   }
 
   &:focus-within::after {
@@ -393,6 +430,18 @@
   border: 1px solid $special-line-grey;
 
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 173px;
+    margin-top: 8px;
+    padding: 10px 15px 13px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 172px;
+    margin-top: 0;
+    padding: 7px 18px 13px;
+  }
 
   &:focus,
   &:focus-visible {
