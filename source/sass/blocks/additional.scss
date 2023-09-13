@@ -7,7 +7,7 @@
     padding-bottom: 75px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 53px;
     padding-bottom: 83px;
   }
@@ -60,7 +60,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    padding: 26px 38px 30px;
+    padding: 26px 37px 30px;
 
     border-right: 1px solid $line-grey;
     border-left: 1px solid $line-grey;

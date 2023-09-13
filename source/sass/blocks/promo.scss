@@ -51,7 +51,7 @@
   padding: 27px 0 37px;
 
   @media (min-width: $tablet-width) {
-    padding: 67px 0 54px;
+    padding: 65px 0 54px;
   }
 
   @media (min-width: $desktop-width) {
@@ -179,7 +179,10 @@
   font-family: $ff-oswald;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 66px;
+    margin-top: 53px;
+    margin-bottom: 16px;
+
+    line-height: 29px;
   }
 }
 
