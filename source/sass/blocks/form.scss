@@ -30,18 +30,18 @@
 
 .form__fieldset {
   display: grid;
-  margin-bottom: 22px;
+  margin: 0 0 24px;
   padding: 0;
 
   border: none;
 
-  gap: 14px;
+  gap: 15px;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 73px;
 
-    gap: 17px;
+    gap: 21px;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,11 +52,13 @@
 }
 
 .form__fieldset--radio {
-  margin: 0 -20px 26px;
+  margin: 0 -20px 27px;
   padding: 22px 20px 17px;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  gap: 14px;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 74px;
@@ -68,10 +70,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 80px;
+    margin: 0 0 77px;
     padding-top: 24px;
 
-    gap: 12px;
+    gap: 14px;
   }
 }
 
@@ -113,7 +115,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 82px;
+    margin-bottom: 81px;
   }
 }
 
@@ -194,14 +196,14 @@
 }
 
 .form__control-item {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .form__control--check {
   position: relative;
 
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   margin: 0;
 
   border: 1px solid $line-grey;
@@ -226,7 +228,7 @@
 }
 
 .form__fieldset--control {
-  margin-bottom: 19px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: -15px;
@@ -238,8 +240,14 @@
 }
 
 .form .form__fieldset--control .form__title {
+  margin-bottom: 19px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -1px;
   }
 }
 
@@ -247,20 +255,22 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 54px;
 
-    gap: 14px 60px;
+    gap: 20px 60px;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+
     gap: 14px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .form__fieldset--button {
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -271,7 +281,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 80px;
+    margin-bottom: 79px;
 
     gap: 80px;
   }
@@ -295,9 +305,8 @@
 
 .form__item {
   display: grid;
-  align-items: baseline;
 
-  gap: 13px;
+  gap: 14px;
   grid-template-columns: auto 1fr;
 
   @media (min-width: $tablet-width) {
@@ -305,8 +314,12 @@
   }
 }
 
+.form__label {
+  align-self: center;
+}
+
 .form .form__title {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   font-weight: 400;
   color: $dark;
@@ -329,8 +342,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    right: 9px;
+    top: 54%;
+    right: 11px;
     z-index: 99;
 
     width: 20px;
@@ -450,7 +463,8 @@
 .form__textarea {
   width: 100%;
   height: 150px;
-  padding: 11px 12px 13px;
+  margin: 0;
+  padding: 11px 14px 13px;
 
   border: 1px solid $special-line-grey;
 
@@ -458,12 +472,12 @@
 
   @media (min-width: $tablet-width) {
     height: 173px;
-    margin-top: 12px;
+    margin-top: 10px;
     padding: 10px 15px 13px 19px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 172px;
+    height: 174px;
     margin-top: 0;
     padding: 10px 18px 15px;
   }

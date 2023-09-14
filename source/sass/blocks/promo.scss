@@ -10,7 +10,6 @@
 
 .promo--home .promo__description {
   height: 302px;
-  // margin: 0 -20px;
   padding: 27px 20px;
 
   text-align: center;
@@ -34,7 +33,6 @@
         rgba(104, 183, 56, 0.85)
       ),
       url("../img/cat-background-mobile@2x.png");
-    background-size: 320px auto;
   }
 
   @media (min-width: $tablet-width) {
@@ -50,16 +48,6 @@
   @media (min-width: $desktop-width) {
     padding-top: 109px;
     padding-left: 80px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to top,
-          rgba(104, 183, 56, 0.85),
-          rgba(104, 183, 56, 0.85)
-        ),
-        url("../img/cat-background-desktop@2x.png");
-      background-size: 720px auto;
-    }
   }
 }
 
@@ -68,14 +56,14 @@
 }
 
 .promo--form .promo__description {
-  padding: 27px 0 43px;
+  padding: 27px 0 38px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 50px;
+    padding: 65px 0 47px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 72px 0 7px;
+    padding: 72px 0 8px;
   }
 }
 
