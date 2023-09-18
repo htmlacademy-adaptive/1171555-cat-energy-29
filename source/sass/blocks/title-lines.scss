@@ -8,7 +8,7 @@
   line-height: 26px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 -70px;
+    margin: 0 -30px;
     padding-left: 30px;
 
     font-size: 36px;
@@ -24,16 +24,28 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 28%;
 
+    display: inline-block;
     width: 100%;
     height: 2px;
 
+    vertical-align: middle;
+
     background-color: $basic-green;
+
+    @media (min-width: $tablet-width) {
+      top: 25px;
+    }
   }
 
   &::before {
+    display: none;
     margin-left: -100%;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+    }
   }
 
   &::after {

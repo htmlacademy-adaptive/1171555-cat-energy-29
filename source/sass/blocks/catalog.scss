@@ -2,24 +2,28 @@
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid $basic-grey;
   }
-}
 
-.catalog img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  @media (min-width: 768px) {
+    padding-top: 50px;
+
+    border: none;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 5px;
+  }
 }
 
 .catalog__list {
-  display: grid;
-
   @media (min-width: $tablet-width) {
-    gap: 60px;
+    display: grid;
+
+    gap: 70px 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    gap: 80px;
+    gap: 73px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -27,7 +31,9 @@
 .catalog__item {
   position: relative;
 
-  padding: 70px 0 0;
+  @media (min-width: 768px) {
+    padding-top: 70px;
+  }
 }
 
 .catalog__item::after {
@@ -40,51 +46,97 @@
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: $tablet-width) {
-    border-bottom: none;
+    display: none;
   }
 }
-
-// .catalog__item.catalog__item--more::after {
-//   @media (min-width: $tablet-width) {
-//     top: 20px;
-//     right: 0;
-//     left: 0;
-
-//     border: 1px solid $basic-grey;
-//   }
-// }
 
 .catalog__item-content {
   display: grid;
-  padding-bottom: 25px;
+  align-items: start;
+  padding: 20px 0 25px;
 
+  gap: 9px 0;
   grid-template-columns: 140px 1fr;
 
   @media (min-width: $tablet-width) {
-    padding: 0 37px 25px;
+    padding: 0 37px 40px;
 
     background-color: $basic-grey;
 
+    gap: 25px 0;
     grid-template-columns: 1fr;
   }
-}
 
-.catalog__item--more .catalog__item-container {
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-    outline: 2px solid $basic-grey;
+  @media (min-width: $desktop-width) {
+    padding: 0 38px 40px;
+
+    gap: 14px 0;
   }
 }
 
 .catalog__img-link {
+  display: block;
+  width: 140px;
+  height: 107px;
+
   @media (min-width: $tablet-width) {
-    margin: -55px auto 0;
+    width: 200px;
+    height: 210px;
+    margin: -70px auto 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    height: 210px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.catalog__img-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.catalog__link {
+  display: block;
+  max-width: 80px;
+  margin-bottom: 16px;
+
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 155px;
+    margin: 0 auto 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .catalog__title {
-  width: 93px;
-  margin-bottom: 20px;
+  margin: 0;
 
   font-weight: 400;
   font-size: 16px;
@@ -94,9 +146,6 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    margin-bottom: 80px;
-
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -111,45 +160,34 @@
   display: flex;
   justify-content: space-between;
 
-  font-size: 12px;
-  line-height: 16px;
-  color: $secondary-dark-grey;
+  gap: 10px;
 
   @media (min-width: $tablet-width) {
-    padding: 7px 0 8px;
-
-    font-size: 16px;
-    line-height: 20px;
+    padding: 7px 0 4px;
 
     border-bottom: 1px solid $line-grey;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 0 7px;
+  }
+}
+
+.catalog__table dd {
+  margin: 0;
 }
 
 .catalog__button {
-  margin-top: 17px;
-
-  font-size: 16px;
-  line-height: 20px;
+  margin-top: 5px;
 
   grid-column: 1/-1;
 
   @media (min-width: $tablet-width) {
-    margin-top: 32px;
+    margin-top: 10px;
   }
-}
 
-.catalog__title--secondary {
-  width: 100%;
-  margin-bottom: 8px;
-  padding-top: 56px;
-
-  text-align: center;
-  color: #111111;
-
-  @media (min-width: $tablet-width) {
-    max-width: 155px;
-    margin-bottom: 30px;
-    padding-top: 132px;
+  @media (min-width: $desktop-width) {
+    margin-top: 21px;
   }
 }
 
@@ -167,77 +205,86 @@
   }
 }
 
-.catalog__item--more {
-  position: relative;
+.catalog__item--more .catalog__item-container {
+  display: block;
+  padding: 78px 0 24px;
 
-  padding-bottom: 25px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-  }
-}
-
-.catalog__item--more::before {
-  content: "";
-  position: absolute;
-  left: 0;
-
-  width: 100%;
-  height: 30px;
+  text-align: center;
 
   background-image: url("../img/svg/plus.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top 25px center;
   background-size: 30px 30px;
 
-  @media (min-width: $tablet-width) {
-    top: 100px;
+  @media (min-width: 768px) {
+    padding: 160px 35px 37px;
 
-    height: 60px;
-
+    background-color: transparent;
+    background-position: top 53px center;
     background-size: 60px 60px;
-  }
-}
-
-.catalog__item--more .catalog__desc {
-  @media (min-width: $tablet-width) {
-    padding: 0 25px 25px;
-
     border: 2px solid $basic-grey;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 149px;
+
+    background-position: top 50px center;
+  }
 }
 
-.catalog__item--more .catalog__button {
-  margin-top: 21px;
+.catalog__item--more .catalog__title {
+  max-width: 100%;
+  margin-bottom: 9px;
 
+  @media (min-width: 768px) {
+    max-width: 155px;
+    margin: 0 auto 23px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 25px;
+  }
+}
+
+.catalog__item--more p {
+  margin: 0 0 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    max-width: 170px;
+    margin: 0 auto 84px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 91px;
+  }
+}
+
+.catalog__item--more .catalog__btn {
   color: $secondary-dark-grey;
 
   background-color: $basic-grey;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 173px;
-  }
-
-  &:hover {
-    background-color: #ebebeb;
-  }
-
+  &:hover,
   &:focus {
-    color: rgba(68, 68, 68, 0.7);
-
     background-color: #ebebeb;
   }
 
   &:active {
+    color: rgba(68, 68, 68, 0.3);
+
     background-color: #ebebeb;
   }
 
   &:disabled,
   &--disabled {
-    color: $secondary-dark-grey;
-
-    background-color: $line-grey;
-    opacity: 0.3;
+    background-color: #e5e5e5;
 
     pointer-events: none;
   }

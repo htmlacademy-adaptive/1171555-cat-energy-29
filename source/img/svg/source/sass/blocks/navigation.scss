@@ -1,0 +1,261 @@
+.navigation {
+  position: relative;
+
+  width: 100%;
+  min-height: 65px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+  }
+}
+
+.navigation__logo {
+  display: block;
+  width: 190px;
+  height: 38px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+    // margin-top: 4px;
+    // margin-left: 5px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.6;
+  }
+}
+
+// Добавить свойства для img
+.navigation__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 100%;
+  right: -20px;
+  left: -20px;
+  z-index: 2;
+
+  display: none;
+  flex-direction: column;
+
+  text-align: center;
+
+  background-color: $light;
+
+  // Правим PP (pixel perfect)
+  @media (min-width: $tablet-width) {
+    position: static;
+
+    display: flex;
+    // gap: 15px;
+    gap: 34px;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 34px;
+    margin-right: 0;
+
+    background-color: transparent;
+  }
+}
+
+// Корректируем pixel perfect
+// Фон перенести на весь список
+.navigation__item {
+  // padding-top: 21px;
+  // padding-bottom: 24px;
+  padding: 22px 10px 20px;
+  // background-color: $light;
+
+  border-top: 1px solid $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    // padding-top: 22px;
+    // padding-top: 9px;
+    // padding-bottom: 0;
+    // background-color: transparent;
+    padding: 0;
+
+    border: none;
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   padding-top: 6px;
+  // }
+}
+
+// line-height не по макету
+// Не прописаны текстовые характеристики
+.navigation__link {
+  // padding-bottom: 8px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $ff-oswald;
+  color: $dark;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    // padding-bottom: 3px;
+    padding: 8px 0;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // padding-bottom: 6px;
+    padding: 6px 0;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    // color: rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
+  }
+
+  // &:active {
+  //   color: rgba(0, 0, 0, 0.3);
+  // }
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+}
+
+// Подчеркивание у ссылки начинается с планшетной версии
+.navigation__link--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $basic-green;
+  }
+}
+
+.header--home .navigation__link--current {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid $light;
+  }
+}
+
+.header--home .navigation__link {
+  @media (min-width: $desktop-width) {
+    color: $light;
+
+    // &:hover {
+    //   color: rgba(255, 255, 255, 0.6);
+    // }
+
+    // &:active {
+    //   color: rgba(255, 255, 255, 0.3);
+    // }
+
+    // &:focus,
+    // &:focus-visible {
+    //   opacity: 0.3;
+    // }
+  }
+}
+
+.navigation.is-open .navigation__list {
+  display: flex;
+}
+
+.navigation__toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+
+  width: 24px;
+  height: 18px;
+
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid $dark;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+    width: 24px;
+    height: 2px;
+
+    border-top: 2px solid $dark;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.navigation.is-open .navigation__toggle {
+  border-color: transparent;
+
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &::after {
+    bottom: 8px;
+
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+// Для чего это?
+// .navigation--no-js {
+// flex-direction: column;
+// }
+
+// .navigation--no-js .navigation__logo
+.no-js .navigation__logo {
+  margin-bottom: 10px;
+}
+
+// .navigation--no-js .navigation__list
+.no-js .navigation__list {
+  // position: relative;
+  position: static;
+
+  display: block;
+}

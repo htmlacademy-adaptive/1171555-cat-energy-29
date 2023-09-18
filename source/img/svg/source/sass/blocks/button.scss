@@ -1,0 +1,49 @@
+// Прописать текстовые характеристики
+// Убираем подчеркивание на случай если класс button у ссылки
+// Убираем бордер
+//
+.button {
+  display: inline-block;
+  width: 100%;
+  // Паддинг сделай со всех сторон по 10px
+  // padding: 10px 0;
+  padding: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $ff-oswald;
+  text-align: center;
+  color: $light;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $basic-green;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: rgba(255, 255, 255, 0.7);
+
+    background-color: #6cc236;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $secondary-dark-grey;
+
+    background-color: $line-grey;
+    opacity: 0.3;
+
+    pointer-events: none;
+  }
+}

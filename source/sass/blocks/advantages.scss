@@ -1,23 +1,21 @@
-.advantages__container {
-  padding-bottom: 49px;
+.advantages {
+  padding: 20px 0 29px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
-    padding-bottom: 76px;
+    padding: 45px 0 44px;
 
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 71px 0 68px;
+
     border-bottom: none;
   }
 }
 
 .advantages__title {
   margin-bottom: 40px;
-
-  font-weight: 400;
-  font-family: $ff-oswald;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
@@ -28,12 +26,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
 
-    gap: 108px 60px;
+    counter-reset: num;
+
+    gap: 75px 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    gap: 77px;
+    gap: 80px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -41,19 +41,48 @@
 .advantages__item {
   position: relative;
 
-  margin-bottom: 26px;
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding: 2px 0 2px 80px;
+
+  color: $secondary-dark-grey;
 
   @media (min-width: $tablet-width) {
-    padding-right: 60px;
+    margin-bottom: 0;
+    padding: 111px 75px 59px 0;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
   }
 
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: counter(num);
+      position: absolute;
+      top: 0;
+      left: 116px;
+      z-index: -1;
+
+      margin: 0;
+
+      font-size: 280px;
+      line-height: 200px;
+      font-family: $ff-oswald;
+      color: $basic-grey;
+
+      counter-increment: num;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -82,34 +111,5 @@
 
   &--terms::before {
     background-image: url("../img/svg/icon-clock.svg");
-  }
-}
-
-.advantages__item span {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 90px;
-    left: 116px;
-    z-index: -1;
-
-    display: block;
-
-    font-size: 280px;
-    font-family: $ff-oswald;
-    color: $basic-grey;
-  }
-}
-
-.advantages__desc {
-  padding-left: 77px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 111px;
-    padding-left: 0;
-
-    font-size: 16px;
-    line-height: 24px;
   }
 }
