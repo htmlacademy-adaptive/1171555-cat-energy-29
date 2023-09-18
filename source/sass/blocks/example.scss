@@ -1,14 +1,17 @@
 .example {
+  padding: 25px 0 40px;
+
   background-color: #eaeaea;
 
   @media (min-width: $tablet-width) {
-    padding: 20px 0 61px;
+    padding: 45px 0 102px;
 
-    background-image: linear-gradient(0deg, #f2f2f2 42.5%, $light 42.9%);
+    background-image: linear-gradient(0deg, $basic-grey 42.5%, $light 42.9%);
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    padding-bottom: 74px;
 
     background-color: $basic-grey;
     background-image: linear-gradient(0deg, $basic-grey 77%, $light 77%);
@@ -16,24 +19,29 @@
 }
 
 .example__container {
-  padding-top: 25px;
-  padding-bottom: 40px;
-
   @media (min-width: $desktop-width) {
     display: grid;
-    padding-top: 0;
-    padding-bottom: 2px;
+    align-items: start;
 
     gap: 10px 224px;
     grid-template-columns: 436px 1fr;
   }
 }
 
+.example__description {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .example__title {
   margin-bottom: 40px;
-
-  font-weight: 400;
-  font-family: $ff-oswald;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
@@ -45,29 +53,24 @@
 }
 
 .example__desc {
+  margin: 0 0 20px;
+
   color: $secondary-dark-grey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 41px;
+    margin-bottom: 55px;
 
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
 .example__parameter-outer {
-  margin-top: 22px;
-  margin-bottom: 20px;
-
   text-align: center;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
-  }
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: grid;
@@ -78,49 +81,43 @@
 
 .example__parameter-list {
   display: grid;
-  margin-bottom: 11px;
+  margin: 0 0 21px;
 
   gap: 32px;
-  grid-template-columns: repeat(2, 124px);
+  grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: $tablet-width) {
     gap: 43px;
     grid-template-columns: repeat(2, 162px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
-.example__parameter-wrapper {
-  position: relative;
+.example__parameter {
+  padding: 14px 10px 16px;
 
-  width: 124px;
-  margin-bottom: 20px;
-  padding-top: 14px;
-  padding-bottom: 25px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $ff-oswald;
+  text-transform: uppercase;
 
   border: 1px solid $line-grey;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {
-    width: 162px;
-  }
-}
+    padding-bottom: 19px;
 
-.example__parameter {
-  font-size: 24px;
-  font-family: $ff-oswald;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
 }
 
 .example__parameter-desc {
-  position: absolute;
-  right: 50%;
-  bottom: -11px;
-
+  max-width: 90px;
+  margin: -10px auto 0;
   padding: 0 7px;
 
   font-size: 12px;
@@ -129,14 +126,13 @@
   text-transform: lowercase;
 
   background-color: #eaeaea;
-  transform: translateX(50%);
 
   @media (min-width: $tablet-width) {
-    bottom: 0;
-
-    width: max-content;
+    max-width: fit-content;
+    padding: 0 9px;
 
     font-size: 14px;
+    line-height: 14px;
 
     background-color: $light;
   }
@@ -147,31 +143,37 @@
 }
 
 .example__total-cost {
+  margin: 0;
+
   font-family: $ff-oswald;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    align-self: center;
-    width: 180px;
-    margin-top: -23px;
+    max-width: 200px;
+    margin-top: 11px;
 
     font-size: 20px;
-    line-height: 29px;
+    line-height: 20px;
     text-align: right;
 
     justify-self: end;
   }
 
   @media (min-width: $desktop-width) {
-    width: 327px;
-    margin-top: 30px;
+    max-width: none;
+    margin-top: 0;
 
     text-align: left;
   }
 }
 
 .example__total-cost span {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-left: 61px;
+    margin: 0 0 0 60px;
   }
 }

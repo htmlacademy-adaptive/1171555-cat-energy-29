@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Не прописан цвет в состоянии покоя
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  fill: #666666;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $basic-green;
+  }
+}
