@@ -123,6 +123,17 @@
   }
 }
 
+.form__fieldset--data .form__input {
+  appearance: none;
+  appearance: textfield;
+
+  &:hover,
+  &:focus,
+  &:active {
+    appearance: none;
+  }
+}
+
 .form__fieldset--contacts .form__group {
   @media (min-width: $desktop-width) {
     gap: 20px 80px;
