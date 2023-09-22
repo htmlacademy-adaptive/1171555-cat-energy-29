@@ -1,5 +1,9 @@
 .control {
   display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 
   gap: 12px;
   grid-template-columns: 1fr;
@@ -87,7 +91,7 @@
 .control__input--radio {
   border-radius: 50%;
 
-  &:checked:after {
+  &:checked::after {
     content: "";
     position: absolute;
     top: 50%;

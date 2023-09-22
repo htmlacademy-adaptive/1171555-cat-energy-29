@@ -123,6 +123,25 @@
   }
 }
 
+.form__fieldset--data .form__input {
+  appearance: textfield;
+
+  &:hover,
+  &:focus,
+  &:active {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}
+
+.form__fieldset--data .form__input[type="number"] {
+  appearance: textfield;
+}
+
 .form__fieldset--contacts .form__group {
   @media (min-width: $desktop-width) {
     gap: 20px 80px;
