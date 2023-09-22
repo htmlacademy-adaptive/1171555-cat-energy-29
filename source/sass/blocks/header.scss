@@ -24,7 +24,7 @@
   }
 }
 
-.header--home:after {
+.header--home::after {
   @media (min-width: $desktop-width) {
     content: "";
     position: absolute;

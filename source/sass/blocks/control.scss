@@ -87,7 +87,7 @@
 .control__input--radio {
   border-radius: 50%;
 
-  &:checked:after {
+  &:checked::after {
     content: "";
     position: absolute;
     top: 50%;

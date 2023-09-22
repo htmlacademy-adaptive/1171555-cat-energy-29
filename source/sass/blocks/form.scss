@@ -124,7 +124,6 @@
 }
 
 .form__fieldset--data .form__input {
-  appearance: none;
   appearance: textfield;
 
   &:hover,
@@ -132,6 +131,15 @@
   &:active {
     appearance: none;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}
+
+.form__fieldset--data .form__input[type="number"] {
+  appearance: textfield;
 }
 
 .form__fieldset--contacts .form__group {
