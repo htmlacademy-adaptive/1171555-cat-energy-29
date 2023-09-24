@@ -208,6 +208,20 @@
   }
 }
 
+.form__input[type="number"] {
+  /* stylelint-disable-next-line */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.form__input[type="number"]::-webkit-outer-spin-button,
+.form__input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .form__legend {
   margin-bottom: 34px;
 
