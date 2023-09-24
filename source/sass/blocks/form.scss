@@ -123,25 +123,6 @@
   }
 }
 
-.form__fieldset--data .form__input {
-  appearance: textfield;
-
-  &:hover,
-  &:focus,
-  &:active {
-    appearance: none;
-  }
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    appearance: none;
-  }
-}
-
-.form__fieldset--data .form__input[type="number"] {
-  appearance: textfield;
-}
-
 .form__fieldset--contacts .form__group {
   @media (min-width: $desktop-width) {
     gap: 20px 80px;
@@ -225,6 +206,20 @@
 
     pointer-events: none;
   }
+}
+
+.form__input[type="number"] {
+  /* stylelint-disable-next-line */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.form__input[type="number"]::-webkit-outer-spin-button,
+.form__input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  /* stylelint-disable-next-line */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .form__legend {

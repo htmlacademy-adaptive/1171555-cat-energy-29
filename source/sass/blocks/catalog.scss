@@ -121,11 +121,11 @@
 
   @media (min-width: $tablet-width) {
     max-width: 155px;
-    margin: 0 auto 13px;
+    margin: 0 auto 10px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 
   &:hover,
@@ -165,10 +165,17 @@
   display: flex;
   justify-content: space-between;
 
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+
   gap: 10px;
 
   @media (min-width: $tablet-width) {
     padding: 7px 0 4px;
+
+    font-size: 16px;
+    line-height: 20px;
 
     border-bottom: 1px solid $line-grey;
   }
@@ -183,16 +190,16 @@
 }
 
 .catalog__button {
-  margin-top: 5px;
+  margin-top: 8px;
 
   grid-column: 1/-1;
 
   @media (min-width: $tablet-width) {
-    margin-top: 10px;
+    margin-top: 7px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 21px;
+    margin-top: 19px;
   }
 }
 
