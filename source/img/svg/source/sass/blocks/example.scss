@@ -1,0 +1,231 @@
+.example {
+  padding: 25px 0 40px;
+
+  background-color: #eaeaea;
+
+  @media (min-width: $tablet-width) {
+    // padding: 20px 0 61px;
+    padding: 45px 0 102px;
+
+    background-image: linear-gradient(0deg, #f2f2f2 42.5%, $light 42.9%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-bottom: 74px;
+
+    background-color: $basic-grey;
+    background-image: linear-gradient(0deg, $basic-grey 77%, $light 77%);
+  }
+}
+
+.example__container {
+  // padding-top: 25px;
+  // padding-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 436px 1fr;
+    gap: 10px 224px;
+    align-items: start;
+    // padding-top: 0;
+    // padding-bottom: 2px;
+  }
+}
+
+.example__description {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    //   padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  margin-bottom: 40px;
+
+  // font-weight: 400;
+  // font-family: $ff-oswald;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+// Добавить нижний маргин
+.example__desc {
+  // margin-bottom: 20px;
+  margin: 0 0 20px;
+
+  color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.example__parameter-outer {
+  // margin-top: 22px;
+  // margin-bottom: 20px;
+  text-align: center;
+
+  // @media (min-width: $tablet-width) {
+  //   margin-bottom: 67px;
+  // }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: 367px 1fr;
+  }
+}
+
+// Убрать маргин
+.example__parameter-list {
+  display: grid;
+  // grid-template-columns: repeat(2, 124px);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 0 0 21px;
+
+  // margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 162px);
+    gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+// Бордер должен быть на dt
+// .example__parameter-wrapper {
+// position: relative;
+// width: 124px;
+// margin-bottom: 20px;
+// padding-top: 14px;
+// padding-bottom: 25px;
+
+// border: 1px solid $line-grey;
+// border-radius: 3px;
+
+// @media (min-width: $tablet-width) {
+// width: 162px;
+// }
+// }
+
+// Прописать межстрочный интервал
+.example__parameter {
+  padding: 14px 10px 16px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $ff-oswald;
+  text-transform: uppercase;
+
+  border: 1px solid $line-grey;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 19px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+// Обнулить маргин и поднять текст отрицательным маргином
+.example__parameter-desc {
+  max-width: 90px;
+  margin: -10px auto 0;
+  // position: absolute;
+  // right: 50%;
+  // bottom: -11px;
+  padding: 0 7px;
+
+  font-size: 12px;
+  line-height: 12px;
+  color: $secondary-dark-grey;
+  text-transform: lowercase;
+
+  background-color: #eaeaea;
+
+  // transform: translateX(50%);
+
+  @media (min-width: $tablet-width) {
+    max-width: fit-content;
+    // bottom: 0;
+    // width: max-content;
+    padding: 0 9px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $light;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey;
+  }
+}
+
+.example__total-cost {
+  margin: 0;
+
+  font-family: $ff-oswald;
+  text-transform: uppercase;
+
+  // Текстовые характеристики не соответствуют макету
+  @media (min-width: $tablet-width) {
+    // align-self: center;
+    // width: 180px;
+    max-width: 200px;
+    // margin-top: -23px;
+    margin-top: 11px;
+
+    font-size: 20px;
+    // line-height: 29px;
+    line-height: 20px;
+    text-align: right;
+
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    // width: 327px;
+    // margin-top: 30px;
+    max-width: none;
+    margin-top: 0;
+
+    text-align: left;
+  }
+}
+
+.example__total-cost span {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // padding-left: 61px;
+    margin: 0 0 0 60px;
+  }
+}

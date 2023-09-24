@@ -1,0 +1,130 @@
+.footer {
+  background-color: $basic-grey;
+}
+
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+// Цвет лого не красится???
+// Все красится, что именно не так? Попробуй просто поставить красный цвет и сразу увидешь что все работает
+.footer__logo {
+  display: block;
+  width: 128px;
+  height: 24px;
+  margin: 0 auto 19px;
+
+  text-align: center;
+  color: #111111;
+
+  fill: currentColor;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #3e3e3e;
+
+    outline: none;
+  }
+
+  &:active {
+    color: #6b6b6b;
+
+    opacity: 0.3;
+  }
+}
+
+// Все свойства перенести на класс social, кроме бордера и отступов
+.footer__social {
+  // display: flex;
+  // gap: 24px;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  margin-bottom: 20px;
+  padding: 19px 0;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    // margin-bottom: 0;
+    // margin-left: 40px;
+    margin: 0 0 0 40px;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+// Должен находится в файле social.scss
+// .social__link {
+//   display: block;
+//   width: 28px;
+//   height: 22px;
+
+//   &:hover,
+//   &:focus,
+//   &:focus-visible {
+//     outline: none;
+
+//     fill: $basic-green;
+//   }
+
+//   &:active {
+//     opacity: 0.3;
+
+//     fill: $basic-green;
+//   }
+// }
+
+// Добавить текстовые характеристики
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondary-dark-grey;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    // width: 168px;
+    gap: 22px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $basic-green;
+  }
+}

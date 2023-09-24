@@ -1,0 +1,120 @@
+.advantages {
+  padding: 20px 0 29px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0 44px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 71px 0 68px;
+
+    border-bottom: none;
+  }
+}
+
+.advantages__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    counter-reset: num;
+
+    gap: 75px 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding: 2px 0 2px 80px;
+
+  color: $secondary-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 111px 75px 59px 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: counter(num);
+      position: absolute;
+      top: 0;
+      left: 116px;
+      z-index: -1;
+
+      margin: 0;
+
+      font-size: 280px;
+      line-height: 200px;
+      font-family: $ff-oswald;
+      color: $basic-grey;
+
+      counter-increment: num;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--useful::before {
+    background-image: url("../img/svg/icon-leaf.svg");
+  }
+
+  &--release-form::before {
+    background-image: url("../img/svg/icon-form.svg");
+  }
+
+  &--food-time::before {
+    background-image: url("../img/svg/icon-eat.svg");
+  }
+
+  &--terms::before {
+    background-image: url("../img/svg/icon-clock.svg");
+  }
+}
